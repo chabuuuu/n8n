@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  n8n:
+    container_name: n8n
+    image: haphuthinh/n8n:latest
+    restart: unless-stopped
+    ports:
+      - '5678:5678'
+    networks:
+      - main-network
+    volumes:
+      - n8n_data:/home/node/.n8n
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 3GB
+
+volumes:
+  n8n_data:
+
+networks:
+  main-network:
+    driver: bridge
