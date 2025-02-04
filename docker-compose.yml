@@ -11,6 +11,8 @@ services:
       - main-network
     volumes:
       - n8n_data:/home/node/.n8n
+    environment:
+      - N8N_SECURE_COOKIE=false
     deploy:
       resources:
         limits:
