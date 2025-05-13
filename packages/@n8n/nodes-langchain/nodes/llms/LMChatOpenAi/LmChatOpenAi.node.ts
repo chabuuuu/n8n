@@ -327,7 +327,7 @@ export class LmChatOpenAi implements INodeType {
 			timeout: options.timeout ?? 60000,
 			maxRetries: options.maxRetries ?? 2,
 			configuration,
-			callbacks: [new N8nLlmTracing(this)],
+			callbacks: [],
 			modelKwargs: options.responseFormat
 				? {
 						response_format: { type: options.responseFormat },

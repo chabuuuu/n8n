@@ -3,7 +3,7 @@ version: '3.9'
 services:
   n8n:
     container_name: n8n
-    image: haphuthinh/n8n:latest
+    image: n8n-custom
     restart: unless-stopped
     ports:
       - '5678:5678'
@@ -13,6 +13,7 @@ services:
       - n8n_data:/home/node/.n8n
     environment:
       - N8N_SECURE_COOKIE=false
+      - WEBHOOK_URL=http://skynew.com.vn/
     deploy:
       resources:
         limits:
