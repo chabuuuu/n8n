@@ -3,7 +3,7 @@ version: '3.9'
 services:
   n8n:
     container_name: n8n
-    image: n8n-custom
+    image: haphuthinh/n8n:latest
     restart: unless-stopped
     ports:
       - '5678:5678'
