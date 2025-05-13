@@ -13,6 +13,7 @@ services:
       - n8n_data:/home/node/.n8n
     environment:
       - N8N_SECURE_COOKIE=false
+      - WEBHOOK_URL=http://skynew.com.vn/
     deploy:
       resources:
         limits:

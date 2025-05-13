@@ -22,9 +22,5 @@ IMAGE_NAME="haphuthinh/n8n:$TAG"
 echo "Building Docker image $IMAGE_NAME..."
 sudo docker build -t "$IMAGE_NAME" -f docker/images/n8n-custom/Dockerfile .
 
-# Push Docker image lên Docker Hub
-echo "Pushing Docker image to Docker Hub..."
-sudo docker push "$IMAGE_NAME"
-
 # Thông báo hoàn thành
-echo "Docker image đã được push thành công: $IMAGE_NAME"
+echo "Docker image đã được build thành công: $IMAGE_NAME"
